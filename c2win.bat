@@ -1,4 +1,5 @@
 @echo off
 echo \033c\033[43;30m
-.\gcc.exe -M intel -d %1.exe -C > %1.S
+echo %1
+.\gcc.exe -o %1.S %1.c -masm=intel -S  
 @echo on
