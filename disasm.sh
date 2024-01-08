@@ -1,2 +1,2 @@
-printf "\x1c\x1b[43;30m"
-objdump -M intel  -d $1 -C >$1.S
+printf "\ec\e[43;37m\n"
+objdump  -M intel -d -S $1 | bash awk.sh
